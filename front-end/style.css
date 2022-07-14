@@ -1,0 +1,184 @@
+@import url(./font/futura\ light\ bt.ttf);
+@font-face {
+    font-family: 'futura';
+    src: url(./font/futura\ light\ bt.ttf); /* IE9 Compat Modes */
+    src: url(./font/futura\ light\ bt.ttf) format('embedded-opentype'), /* IE6-IE8 */
+    url(./font/futura\ light\ bt.ttf) format('woff'), /* Modern Browsers */
+         url(./font/futura\ light\ bt.ttf)  format('truetype'), /* Safari, Android, iOS */
+         url('webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
+  };
+
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'futura', Arial, Helvetica, sans-serif;
+  color: rgba(127, 112, 61, 1);
+  font-weight: 300;
+  line-height: 1.6;
+  background:linear-gradient(
+    rgba(0, 0, 0, 0.7), 
+    rgba(0, 0, 0, 0.7)
+  ), url("./img/gundam-background.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  z-index: 0;
+}
+
+.header {
+    background-color:white;
+    width: inherit;
+    z-index: 1;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 12vh;
+    width: 80%;
+    margin: auto;
+    background-color:white;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    width: 15%;
+    transition: all .5s;
+}
+
+.search-box:focus-within {
+    border: solid black 1px;
+}
+
+.search-box > input {
+    border: none;
+    height: 3rem;
+}
+
+
+/* SEARCH BOX*/
+.search-box-placeholder::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    font-family: 'futura', Arial, Helvetica, sans-serif;
+    opacity: 1; /* Firefox */
+    font-size: 1.5rem;
+}
+  
+.search-box-placeholder:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    font-family: 'futura', Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+  }
+  
+.search-box-placeholder::-ms-input-placeholder { /* Microsoft Edge */
+    font-family: 'futura', Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+  }
+
+.search-box-placeholder {
+    outline: none;
+}
+
+
+
+.list {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+    font-size: 1.8rem;
+    font-family: 'futura' ;
+}
+
+
+
+.search {
+    margin: 1rem;
+}
+
+.right-panel {
+    display: flex;
+    width: 15%;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 1.8rem;
+    font-family: 'futura' ;
+}
+
+.log-in {
+    margin: .3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.shopping-cart {
+    width: 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+svg {
+    fill: rgba(127, 112, 61, 1);
+    width: 20px;
+    height: 20px;
+}
+
+.big-logo {
+    width: 100vw;
+    height: 90vh;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.big-block {
+    height: 30vh;
+    width: 60vh;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    border: 1px solid rgba(127, 112, 61, 1);
+    outline: 5px solid white;
+}
+
+
+.h1-block{
+    width: 80%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    border-bottom: 1px solid rgba(127, 112, 61, 1);
+}
+
+.h3-block{
+    width: inherit;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    letter-spacing: .8rem;
+}
