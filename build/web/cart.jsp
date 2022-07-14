@@ -24,7 +24,7 @@
                 <th>Price</th>
             </tr>
             <c:set var="total" value="0"/>
-            <c:forEach var="gunpla" items="${cart.list}">
+            <c:forEach var="gunpla" items="${cart.list}" varStatus="loop">
                 <tr>
                     <td>${loop.count}</td>
                     <td>${gunpla.id}</td>
