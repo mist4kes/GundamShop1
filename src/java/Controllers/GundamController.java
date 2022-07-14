@@ -143,10 +143,18 @@ public class GundamController extends HttpServlet {
         request.setAttribute("list", cartList);
         request.getRequestDispatcher("/cart.jsp").forward(request, response);
     }
-    
+
     protected void checkout(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException, SQLException {
-        cartList.clear();
+        HttpSession session = request.getSession();
+
+        Cart cart = (Cart) session.getAttribute("cart");
+
+        //check session exist
+        if (cart != null) {
+            cart.empty();
+        }
+        session.setAttribute("cart", cart);
         request.getRequestDispatcher("/checkout.jsp").forward(request, response);
     }
 
