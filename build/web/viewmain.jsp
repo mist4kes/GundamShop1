@@ -31,7 +31,7 @@
         <br>
         <hr>
         <c:if test="${not empty list}">
-            <table>
+            <table border="1">
                 <tr>
                     <th class="text-right">Id</th>
                     <th class="text-left">Name</th>
@@ -48,10 +48,10 @@
                         <td class="text-left">${gunpla.name}</td>
                         <td class="text-right">${gunpla.price}</td>
                         <td class="text-left"><img src="<c:url value="/images/${gunpla.imgPath}"/>" width="100" height="60"/></td>
-                        <td class="text-left">${gunpla.categoryId}</td>
-                        <td class="text-left">${gunpla.status==0?"Inactive":"Active"}</td>
-                        <td class="text-left"><a href="GundamController/viewmodel?id=${gunpla.id}">View</a></td>
-                        <td class="text-left"><a href="GundamController/addtocart?id=${gunpla.id}">Add to cart</a></td>
+                        <td class="text-center">${gunpla.categoryId}</td>
+                        <td class="text-center">${gunpla.status==0?"Inactive":"Active"}</td>
+                        <td class="text-center"><a href="GundamController/viewmodel?id=${gunpla.id}">View</a></td>
+                        <td class="text-center"><a href="GundamController/addtocart?id=${gunpla.id}">Add to cart</a></td>
                     </tr>
                 </c:forEach>
             </table>

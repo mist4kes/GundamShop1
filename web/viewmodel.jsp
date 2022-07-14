@@ -21,6 +21,7 @@
                     <th class="text-left">Name</th>
                     <th class="text-right">Price</th>
                     <th class="text-left">Image</th>
+                    <th class="text-left">Description</th>
                     <th class="text-left">Category</th>
                     <th class="text-left">Status</th>
                     <th class="text-left">Add to cart</th>
@@ -30,7 +31,8 @@
                         <td class="text-right">${gunpla.id}</td>
                         <td class="text-left">${gunpla.name}</td>
                         <td class="text-right">${gunpla.price}</td>
-                        <td class="text-left"><img src="<c:url value="/images/${gunpla.imgPath}"/>" width="100" height="60"/></td>
+                        <td class="text-left"><img src="<c:url value="/images/${gunpla.imgPath}"/>" width="200" height="200"/></td>
+                        <td class="text-right">${gunpla.description}</td>
                         <td class="text-left">${gunpla.categoryId}</td>
                         <td class="text-left">${gunpla.status==0?"Inactive":"Active"}</td>
                         <td class="text-left"><a href="GundamController/addtocart?id=${gunpla.id}">Add to cart</a></td>
