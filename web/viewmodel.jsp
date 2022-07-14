@@ -30,7 +30,7 @@
                         <td class="text-right">${gunpla.id}</td>
                         <td class="text-left">${gunpla.name}</td>
                         <td class="text-right">${gunpla.price}</td>
-                        <td class="text-left"><img src="images/${gunpla.imgPath}" width="100" height="60"/></td>
+                        <td class="text-left"><img src="<c:url value="/images/${gunpla.imgPath}"/>" width="100" height="60"/></td>
                         <td class="text-left">${gunpla.categoryId}</td>
                         <td class="text-left">${gunpla.status==0?"Inactive":"Active"}</td>
                         <td class="text-left"><a href="GundamController/addtocart?id=${gunpla.id}">Add to cart</a></td>
@@ -39,5 +39,6 @@
             </table>
         </c:if>
         <a href="<c:url value="GundamController/view"/>">Home</a>
+        
     </body>
 </html>

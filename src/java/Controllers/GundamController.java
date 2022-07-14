@@ -163,8 +163,8 @@ public class GundamController extends HttpServlet {
         int id = Integer.parseInt(request.getParameter("id"));
         Gunpla gunpla = GunplaDAO.getGunpla(id);
         List<Gunpla> list = new ArrayList<>();
-        list.add(gunpla);
-
+        list.add(GunplaDAO.getGunpla(gunpla.getId()));
+        
         request.setAttribute("list", list);
 //        request.setAttribute("gunpla", gunpla);
         request.getRequestDispatcher("/viewmodel.jsp").forward(request, response);

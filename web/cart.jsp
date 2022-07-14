@@ -29,7 +29,7 @@
                     <td>${loop.count}</td>
                     <td>${gunpla.id}</td>
                     <td>${gunpla.name}</td>
-                    <td>${gunpla.imgPath}</td>
+                    <td><img src="<c:url value="/images/${gunpla.imgPath}"/>" width="100" height="60"/></td>
                     <td>${gunpla.price}</td>
                 </tr>
                 <c:set var="total" value="${total + gunpla.price}"/>
