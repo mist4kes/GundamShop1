@@ -15,6 +15,7 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -62,6 +63,11 @@ body {
 .header-item > a {
   text-decoration: none;
   color: #7f703d;
+  transition: all 0.25s;
+}
+
+.header-item > a:hover {
+  color: #000;
 }
 
 .search-box:focus-within {
@@ -123,7 +129,8 @@ body {
   margin: 0.3rem;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  width: 7.5rem;
 }
 
 .shopping-cart {
@@ -223,8 +230,10 @@ svg {
 .item {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  width: 27.5rem;
+  height: 37.5rem;
 }
 
 .item__img {
@@ -416,6 +425,18 @@ svg {
 .top > a {
   text-decoration: none;
   color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.up-svg {
+  transition: all 0.3s;
+}
+
+.up-svg:hover {
+  transform: translateY(-5px);
 }
 
 .faq {
