@@ -223,8 +223,8 @@ svg {
   justify-content: center;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-  grid-template-rows: repeat(6rem);
-  grid-gap: 20px;
+  column-gap: 3rem;
+  row-gap: 8rem;
 }
 
 .item {
@@ -234,6 +234,29 @@ svg {
   align-items: center;
   width: 27.5rem;
   height: 37.5rem;
+  transition: all 0.2s;
+}
+
+.item:hover {
+  transform: translateY(-3px);
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.item-box {
+  width: inherit;
+}
+
+.item__status {
+  z-index: 2;
+  width: 8rem;
+  height: 2.5rem;
+  background-color: #7f703d;
+  position: absolute;
+  color: #fff;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .item__img {
@@ -431,12 +454,21 @@ svg {
   align-items: center;
 }
 
+.top > a > p {
+  transition: all 0.5s;
+}
+
+.top > a > p:hover {
+  color: #2c2c2b;
+}
+
 .up-svg {
-  transition: all 0.3s;
+  transition: all 0.5s;
+  fill: #fff;
 }
 
 .up-svg:hover {
-  transform: translateY(-5px);
+  fill: #2c2c2b;
 }
 
 .faq {
