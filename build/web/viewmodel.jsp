@@ -41,6 +41,20 @@
             </table>
         </c:if>
         <a href="<c:url value="GundamController/view"/>">Home</a>
-        
+        <hr>
+        <c:forEach var="gunpla" items="${list}">
+            <div style="border: 2px solid black; width: 30%">
+                <div style="text-align: center">
+                    <img src="<c:url value="/images/${gunpla.imgPath}"/>" width="200" height="200"/>
+                </div>
+                <div style="text-align: center">
+                    ${gunpla.name}
+                    ${gunpla.price}
+                </div>
+                <div style="text-align: center">
+                    <a href="GundamController/addtocart?id=${gunpla.id}">Add to cart</a>
+                </div>
+            </div>   
+        </c:forEach>
     </body>
 </html>
