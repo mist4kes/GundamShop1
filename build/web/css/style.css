@@ -1,7 +1,7 @@
 @import url(./font/futura\ light\ bt.ttf);
 @font-face {
   font-family: 'futura';
-  src: url(./font/futura\ light\ bt.ttf);
+  src: url(../front-end/font/futura\ light\ bt.ttf);
 }
 
 *,
@@ -24,7 +24,7 @@ body {
   font-weight: 300;
   line-height: 1.6;
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url('./img/gundam-background.png');
+    url('../front-end/img/gundam-background.png');
   background-size: 100%;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -262,6 +262,11 @@ svg {
   font-size: 1.7rem;
   cursor: pointer;
   transition: all 0.3s;
+}
+
+.item__button > a {
+  text-decoration: none;
+  color: white;
 }
 
 .item__button:hover {

@@ -83,7 +83,7 @@
                         <div class="item">
                     <img src="<c:url value="/images/${gunpla.imgPath}"/>" alt="gundam 1" class="item__img">
                       <p class="item__name">${gunpla.name}</p>
-                        <p class="item__price">${gunpla.price}</p>      
+                        <p class="item__price">$${gunpla.price}</p>      
                         <button class="item__button"><a href="GundamController/addtocart?id=${gunpla.id}">Add to cart</a></button>
                   </div>
                 </c:forEach>
