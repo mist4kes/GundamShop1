@@ -1,0 +1,464 @@
+@import url(./font/futura\ light\ bt.ttf);
+@font-face {
+  font-family: 'futura';
+  src: url(./font/futura\ light\ bt.ttf);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'futura', Arial, Helvetica, sans-serif;
+  color: rgba(127, 112, 61, 1);
+  font-weight: 300;
+  line-height: 1.6;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url('./img/gundam-background.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  z-index: 0;
+}
+
+.scrolling-box {
+  display: block;
+  width: 100%;
+  scroll-behavior: smooth;
+}
+
+.header {
+  background-color: white;
+  width: inherit;
+  z-index: 1;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 12vh;
+  width: 80%;
+  margin: auto;
+  background-color: white;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  width: 15%;
+  transition: all 0.5s;
+}
+
+.header-item > a {
+  text-decoration: none;
+  color: #7f703d;
+  transition: all 0.25s;
+}
+
+.header-item > a:hover {
+  color: #000;
+}
+
+.search-box:focus-within {
+  border: solid black 1px;
+}
+
+.search-box > input {
+  border: none;
+  height: 3rem;
+}
+
+/* SEARCH BOX*/
+.search-box-placeholder::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  font-family: 'futura', Arial, Helvetica, sans-serif;
+  opacity: 1; /* Firefox */
+  font-size: 1.5rem;
+}
+
+.search-box-placeholder:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  font-family: 'futura', Arial, Helvetica, sans-serif;
+  font-size: 1.5rem;
+}
+
+.search-box-placeholder::-ms-input-placeholder {
+  /* Microsoft Edge */
+  font-family: 'futura', Arial, Helvetica, sans-serif;
+  font-size: 1.5rem;
+}
+
+.search-box-placeholder {
+  outline: none;
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  width: 30%;
+  font-size: 1.8rem;
+  font-family: 'futura';
+}
+
+.search {
+  margin: 1rem;
+}
+
+.right-panel {
+  display: flex;
+  width: 15%;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 1.8rem;
+  font-family: 'futura';
+}
+
+.log-in {
+  margin: 0.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 7.5rem;
+}
+
+.shopping-cart {
+  width: 3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+svg {
+  fill: rgba(127, 112, 61, 1);
+  width: 20px;
+  height: 20px;
+}
+
+.big-logo {
+  width: 100vw;
+  height: 90vh;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'futura';
+}
+
+.big-block {
+  height: 30vh;
+  width: 60vh;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border: 1px solid rgba(127, 112, 61, 1);
+  outline: 5px solid white;
+  font-family: 'futura';
+}
+
+.h1-block {
+  width: 80%;
+  height: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  border-bottom: 1px solid rgba(127, 112, 61, 1);
+  font-family: 'futura';
+}
+
+.h3-block {
+  width: inherit;
+  height: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  letter-spacing: 0.8rem;
+  font-family: 'futura';
+}
+.shop {
+  background-color: white;
+  padding-top: 10rem;
+  padding-bottom: 4rem;
+}
+
+.h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4rem;
+  letter-spacing: 1rem;
+  text-transform: uppercase;
+  margin: 0;
+  padding-bottom: 5rem;
+}
+
+.shop-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 10rem;
+}
+
+.container {
+  width: 60%;
+  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-template-rows: repeat(6rem);
+  grid-gap: 20px;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 27.5rem;
+  height: 37.5rem;
+}
+
+.item__img {
+  width: 250px;
+  height: 250px;
+}
+
+.item__name {
+  font-size: 2rem;
+  margin-bottom: 0.2rem;
+  text-transform: capitalize;
+}
+
+.item__price {
+  font-size: 1.5rem;
+  margin-top: 0.2rem;
+}
+
+.item__button {
+  width: 100%;
+  border: none;
+  background-color: #2c2c2b;
+  color: white;
+  height: 3.8rem;
+  font-family: 'futura';
+  font-size: 1.7rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.item__button:hover {
+  background-color: #6a6a6a;
+}
+
+.about {
+  background-color: #7f703d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  height: 80vh;
+}
+
+.big-text-about {
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 1.2rem;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+.paragragh-about {
+  width: 35%;
+  font-size: 2rem;
+  text-align: center;
+}
+.companies {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-about {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-1 {
+  width: 80px;
+  height: 80px;
+}
+
+.img-2 {
+  width: 140px;
+  height: 30px;
+}
+
+.img-3 {
+  width: 120px;
+  height: 30px;
+}
+
+.img-4 {
+  width: 50px;
+  height: 50px;
+}
+
+.logo {
+  fill: white !important;
+}
+
+.transparent {
+  height: 100vh;
+}
+
+.contact {
+  background-color: #f6f5f5;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-bottom: 5rem;
+}
+
+.big-text-contact {
+  font-size: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 0.8rem;
+}
+
+.adress-contact {
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 0.3rem;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30rem;
+}
+
+.left-form {
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  margin-right: 1rem;
+}
+
+.left-form-input {
+  width: 250px;
+  height: 3rem;
+  border: 1px solid #7f703d;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  outline: none;
+}
+
+.right-form {
+  font-size: 1.5rem;
+}
+
+.right-form-input {
+  width: 250px;
+  height: 25.33rem;
+  border: 1px solid #7f703d;
+  outline: none;
+}
+
+.submit-btn {
+  width: 15rem;
+  border: none;
+  background-color: #7f703d;
+  color: white;
+  height: 3.8rem;
+  font-family: 'futura';
+  font-size: 1.7rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.submit-btn:hover {
+  background-color: #2c2414;
+}
+
+.footer {
+  height: 40vh;
+  background-color: #7f703d;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.top {
+  font-size: 2rem;
+  text-transform: capitalize;
+}
+
+.top > a {
+  text-decoration: none;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.up-svg {
+  transition: all 0.3s;
+}
+
+.up-svg:hover {
+  transform: translateY(-5px);
+}
+
+.faq {
+  height: 12rem;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+}
+
+.logo-footer {
+  width: 10rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-svg {
+  fill: #fff;
+}
+
+.copyright {
+  font-size: 1.5rem;
+}
