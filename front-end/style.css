@@ -4,6 +4,9 @@
   src: url(./font/futura\ light\ bt.ttf);
 }
 
+:root {
+  --color-main: #700000;
+}
 *,
 *::before,
 *::after {
@@ -20,7 +23,7 @@ html {
 
 body {
   font-family: 'futura', Arial, Helvetica, sans-serif;
-  color: rgba(127, 112, 61, 1);
+  color: var(--color-main);
   font-weight: 300;
   line-height: 1.6;
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
@@ -62,7 +65,7 @@ body {
 
 .header-item > a {
   text-decoration: none;
-  color: #7f703d;
+  color: var(--color-main);
   transition: all 0.25s;
 }
 
@@ -141,7 +144,7 @@ body {
 }
 
 svg {
-  fill: rgba(127, 112, 61, 1);
+  fill: var(--color-main);
   width: 20px;
   height: 20px;
 }
@@ -168,7 +171,7 @@ svg {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  border: 1px solid rgba(127, 112, 61, 1);
+  border: 1px solid var(--color-main);
   outline: 5px solid white;
   font-family: 'futura';
 }
@@ -180,7 +183,7 @@ svg {
   justify-content: center;
   align-items: center;
   font-size: 3rem;
-  border-bottom: 1px solid rgba(127, 112, 61, 1);
+  border-bottom: 1px solid var(--color-main);
   font-family: 'futura';
 }
 
@@ -239,7 +242,7 @@ svg {
 
 .item-view {
   text-decoration: none;
-  color: #7f703d;
+  color: var(--color-main);
   cursor: pointer;
 }
 
@@ -256,7 +259,7 @@ svg {
   z-index: 2;
   width: 8rem;
   height: 2.5rem;
-  background-color: #7f703d;
+  background-color: var(--color-main);
   position: absolute;
   color: #fff;
   font-size: 1.2rem;
@@ -298,7 +301,7 @@ svg {
 }
 
 .about {
-  background-color: #7f703d;
+  background-color: var(--color-main);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -403,7 +406,7 @@ svg {
 .left-form-input {
   width: 250px;
   height: 3rem;
-  border: 1px solid #7f703d;
+  border: 1px solid var(--color-main);
   margin-top: 1rem;
   margin-bottom: 1rem;
   outline: none;
@@ -416,14 +419,14 @@ svg {
 .right-form-input {
   width: 250px;
   height: 25.33rem;
-  border: 1px solid #7f703d;
+  border: 1px solid var(--color-main);
   outline: none;
 }
 
 .submit-btn {
   width: 15rem;
   border: none;
-  background-color: #7f703d;
+  background-color: var(--color-main);
   color: white;
   height: 3.8rem;
   font-family: 'futura';
@@ -438,7 +441,7 @@ svg {
 
 .footer {
   height: 40vh;
-  background-color: #7f703d;
+  background-color: var(--color-main);
   color: white;
   display: flex;
   flex-direction: column;
@@ -484,6 +487,11 @@ svg {
   justify-content: space-evenly;
   align-items: center;
   flex-direction: column;
+}
+
+.faq > a {
+  text-decoration: none;
+  color: #fff;
 }
 
 .logo-footer {
@@ -540,8 +548,34 @@ svg {
 }
 
 .right-modal {
-  width: 50%;
+  width: 37.5%;
   height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.right-modal-text > h1 {
+  font-size: 5rem;
+}
+
+.right-modal-text > h2 {
+  font-size: 3rem;
+}
+
+.right-modal-text > p {
+  font-size: 1.5rem;
+  margin-top: 2rem;
+}
+
+.btn-color {
+  height: 5rem;
+  background-color: var(--color-main);
+}
+
+.left-modal {
+  width: 60%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -556,4 +590,148 @@ svg {
   cursor: pointer;
   border: none;
   background: none;
+}
+
+.slide-show-container {
+  max-width: 1000px;
+  position: relative;
+  width: 100%;
+  height: inherit;
+  text-align: center;
+}
+
+.mySlides {
+  display: none;
+}
+
+.mySlides > img {
+  width: 50rem;
+  height: 50rem;
+  margin-top: 1rem;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.dot {
+  cursor: pointer;
+  height: 10px;
+  width: 10px;
+  margin: 0 2px;
+  background-color: #cdcdcd;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.dot-container {
+  text-align: center;
+}
+
+.active,
+.dot:hover {
+  background-color: #2b2b2b;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* ------------------------------------- FAQ PAGE --------------------------- */
+.faq-page {
+  width: 100%;
+  height: 130vh;
+  background-color: #fff;
+  padding-top: 5rem;
+  border-top: #000 1px solid;
+}
+
+.faq-container {
+  margin: auto;
+  width: 40%;
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.faq-top {
+  text-transform: uppercase;
+  font-size: 4rem;
+  letter-spacing: 0.7rem;
+}
+
+.faq-policy-tag {
+  text-transform: capitalize;
+  font-size: 3rem;
+  letter-spacing: 0.5rem;
+}
+
+.faq-policy-section {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.faq-policy-section > p {
+  margin-bottom: 4rem;
+}
+
+.faq-return-tag {
+  text-transform: capitalize;
+  font-size: 3rem;
+  letter-spacing: 0.5rem;
+}
+
+.faq-return-section {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.faq-return-section > p {
+  margin-bottom: 4rem;
+}
+
+.term-page {
+  width: 100%;
+  height: 180vh;
+  background-color: #fff;
+  padding-top: 5rem;
+  border-top: #000 1px solid;
 }
