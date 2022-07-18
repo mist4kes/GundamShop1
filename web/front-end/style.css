@@ -59,7 +59,7 @@ body {
 .search-box {
   display: flex;
   align-items: center;
-  width: 15%;
+  width: 100%;
   transition: all 0.5s;
 }
 
@@ -909,6 +909,8 @@ input[type='number']::-webkit-outer-spin-button {
 .number-input,
 .number-input * {
   box-sizing: border-box;
+  margin: 2%;
+  margin-left: 0%;
 }
 
 .number-input button {
