@@ -115,7 +115,7 @@
 
                         <ul class="list">
                             <li class="header-item">
-                                <a href="#1">Home</a>
+                                <a href="GundamController/view">Home</a>
                             </li>
                             <li class="header-item"><a href="#2">Shop</a></li>
                             <li class="header-item"><a href="#3">About</a></li>
