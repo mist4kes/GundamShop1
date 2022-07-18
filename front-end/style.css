@@ -895,3 +895,79 @@ svg {
 .hidden1 {
   display: none;
 }
+
+.payment-container {
+  min-height: 80vh;
+  max-height: 280vh;
+  border-top: #cdcdcd 1px solid;
+  display: flex;
+  color: #000;
+  padding: 8rem 20rem;
+  background-color: #fff;
+  height: inherit;
+  width: 100%;
+}
+
+.left-payment {
+  background-color: red;
+  width: 62.5%;
+
+  height: inherit;
+}
+
+.right-payment {
+  background-color: #fff;
+  width: 37.5%;
+  height: 30rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-left: 4rem;
+}
+
+.payment-tag {
+  font-size: 3rem;
+  width: 80%;
+  border-bottom: #cdcdcd 1px solid;
+  padding-bottom: 2rem;
+}
+
+.subtotal {
+  font-size: 2rem;
+  width: 80%;
+  padding: 2rem 0;
+}
+
+.sub-total,
+.estimate-shipping,
+.total-tag {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.total-tag {
+  font-size: 3rem;
+  padding: 2rem 0;
+  border-top: #cdcdcd 1px solid;
+  width: 80%;
+}
+
+.checkout-btn {
+  width: 80%;
+}
+
+.secure-text {
+  text-align: center;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  padding: 2rem;
+}
+
+.secure-text > svg {
+  margin-right: 0.8rem;
+}
