@@ -70,16 +70,16 @@
                         <div class="left-modal">
                             <div class="slide-show-container">
                                 <div class="mySlides fade" style="display: block;">
-                                    <img src="img/gundam-1.jpg" alt="gundam 1">
+                                    <img src="<c:url value="/images/${gunpla.imgPath}"/>" alt="gundam 1">
                                 </div>
                                 <div class="mySlides fade">
-                                    <img src="img/gundam-1-1.jpg" alt="gundam 1">
+                                    <img src="<c:url value="/images/1${gunpla.imgPath}"/>" alt="gundam 1">
                                 </div>
                                 <div class="mySlides fade">
-                                    <img src="img/gundam-1-2.jpg" alt="gundam 1">
+                                    <img src="<c:url value="/images/2${gunpla.imgPath}"/>" alt="gundam 1">
                                 </div>
                                 <div class="mySlides fade">
-                                    <img src="img/gundam-1-3.jpg" alt="gundam 1">
+                                    <img src="<c:url value="/images/3${gunpla.imgPath}"/>" alt="gundam 1">
                                 </div>
                             </div>
 
@@ -184,6 +184,6 @@
             </section>
         </div>
 
-        <script src="script.js"></script>
+        <script src="../front-end/script.js"></script>
     </body>
 </html>
