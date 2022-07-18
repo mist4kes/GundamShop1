@@ -52,7 +52,6 @@
 			C332.623,387.361,302.323,357.161,265.823,357.161z M290.923,424.861c0,14.6-11.5,26.1-25,26.1c-13.5,0-25-11.5-25-26.1
 			s11.5-26.1,25-26.1C280.423,398.861,291.923,410.261,290.923,424.861z"/>
 	</g></g><g></g><g></g><g></g<g></g></g><g></g><g></g><g></g></g><g></g><g><g><g></g><g></g><g></g><g></g></svg>
-    <span>0</span>
             </div>
             
         </div>
@@ -62,9 +61,48 @@
     <section class="payment">
         <div class="payment-container">
         <div class="left-payment">
-            <div class="payment-tag">
+            <div class="payment-tag left">
                 My Cart
             </div>
+            <div class="product-payment">
+                <div class="left-item">
+                <img src="img/gundam-1.jpg" alt="gundam">
+                <div class="text-price">
+                    <p class="name-price">Gundam 1</p>
+                    <p class="price-text">$85.00</p>
+                </div>
+                </div>
+                <div class="right-item">
+                    <div class="number-input">
+                        <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" ></button>
+                        <input class="quantity" min="0" name="quantity" value="1" type="number">
+                        <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+                      </div>
+
+                      <p>$85.00</p>
+                      <button class="close-item">&times;</button>
+                </div>
+            </div>
+            <div class="product-payment">
+                <div class="left-item">
+                    <img src="img/gundam-1.jpg" alt="gundam">
+                    <div class="text-price">
+                        <p class="name-price">Gundam 1</p>
+                        <p class="price-text">$85.00</p>
+                    </div>
+                    </div>
+                    <div class="right-item">
+                        <div class="number-input">
+                            <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" ></button>
+                            <input class="quantity" min="0" name="quantity" value="1" type="number">
+                            <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+                          </div>
+    
+                          <p>$85.00</p>
+                          <button class="close-item">&times;</button>
+                    </div>
+            </div>
+            
         </div>
         <div class="right-payment">
             <div class="payment-tag">
@@ -87,7 +125,7 @@
             <a href="#" target="_blank" class="checkout-btn"><button class="item__button btn-color ">Checkout</button></a>
             <div class="secure-text">
                 <?xml version="1.0"?><svg fill="#000" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" width="24px" height="24px">    <path d="M 12 1 C 8.6761905 1 6 3.6761905 6 7 L 6 8 C 4.9069372 8 4 8.9069372 4 10 L 4 20 C 4 21.093063 4.9069372 22 6 22 L 18 22 C 19.093063 22 20 21.093063 20 20 L 20 10 C 20 8.9069372 19.093063 8 18 8 L 18 7 C 18 3.6761905 15.32381 1 12 1 z M 12 3 C 14.27619 3 16 4.7238095 16 7 L 16 8 L 8 8 L 8 7 C 8 4.7238095 9.7238095 3 12 3 z M 6 10 L 18 10 L 18 20 L 6 20 L 6 10 z M 12 13 C 10.9 13 10 13.9 10 15 C 10 16.1 10.9 17 12 17 C 13.1 17 14 16.1 14 15 C 14 13.9 13.1 13 12 13 z"/></svg>
-                  Secure Checkout
+                  Secured Checkout
             </div>
         </div>
     </div>
