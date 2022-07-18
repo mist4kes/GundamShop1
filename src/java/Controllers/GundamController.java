@@ -108,9 +108,14 @@ public class GundamController extends HttpServlet {
     }
 
     protected void search(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException, SQLException {
-        
+            throws ServletException, IOException, SQLException, ClassNotFoundException {
+        HttpSession session = request.getSession();
+        String name = request.getParameter("name");
+        List<Gunpla> list = GunplaDAO.search(name);
+        request.setAttribute("list", list);
+        request.getRequestDispatcher("/viewmain1.jsp").forward(request, response);
     }
+
     protected void addtocart(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException, SQLException {
         int id = Integer.parseInt(request.getParameter("id"));
@@ -157,7 +162,7 @@ public class GundamController extends HttpServlet {
         Gunpla gunpla = GunplaDAO.getGunpla(id);
         List<Gunpla> list = new ArrayList<>();
         list.add(GunplaDAO.getGunpla(gunpla.getId()));
-        
+
         request.setAttribute("list", list);
 //        request.setAttribute("gunpla", gunpla);
         request.getRequestDispatcher("/viewmodel.jsp").forward(request, response);
