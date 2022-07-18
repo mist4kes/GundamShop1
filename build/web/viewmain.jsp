@@ -17,14 +17,10 @@
         <hr>
         <a href="<c:url value="/login.jsp"/>">Login</a>
         ${user.fullName}
-        <hr>
+        |
 
-        //NO SEARCH, CLICK TO VIEW
-        <!--        <form action="GundamController/search">
-                    Enter the model name: 
-                    <input type="text" name="searchText" value="${searchText==null?"":searchText}"/>
-                    <input type="submit" name="op" value="Search"/>            
-                </form>-->
+        <a href="<c:url value="/search.jsp"/>">Search</a>
+        <hr/>
 
         
         <a href="<c:url value="GundamController/viewcart"/>">Cart</a>

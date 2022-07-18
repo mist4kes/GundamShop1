@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="front-end/style.css">
+    <link rel="stylesheet" href="<c:url value="/front-end/style.css"/>">
     <title>Gundam</title>
 </head>
 <body>
@@ -52,6 +52,7 @@
               <div class="overlay hidden"></div>
         </div>
 
+        <form action="GundamController/login" method="post">
         <div class="log-in-modal hidden1">
             <div class="modal-login">
                 <button class="close-modal-login">&times;</button>
@@ -82,24 +83,25 @@
 </g>
 </svg>
 
-                            <input type="text" placeholder="Your Account" class="login-box-placeholder">
+                            <input type="text" placeholder="Your Account" name="userId" class="login-box-placeholder">
                         </div>
 
                         <div class="login-box">
                             <?xml version="1.0"?><svg class="login-svg"  xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" width="24px" height="24px">    <path d="M 12 1 C 8.6761905 1 6 3.6761905 6 7 L 6 8 C 4.9069372 8 4 8.9069372 4 10 L 4 20 C 4 21.093063 4.9069372 22 6 22 L 18 22 C 19.093063 22 20 21.093063 20 20 L 20 10 C 20 8.9069372 19.093063 8 18 8 L 18 7 C 18 3.6761905 15.32381 1 12 1 z M 12 3 C 14.27619 3 16 4.7238095 16 7 L 16 8 L 8 8 L 8 7 C 8 4.7238095 9.7238095 3 12 3 z M 6 10 L 18 10 L 18 20 L 6 20 L 6 10 z M 12 13 C 10.9 13 10 13.9 10 15 C 10 16.1 10.9 17 12 17 C 13.1 17 14 16.1 14 15 C 14 13.9 13.1 13 12 13 z"/></svg>
-                            <input type="text" placeholder="Your Password" class="login-box-placeholder">
+                            <input type="password" placeholder="Your Password" name="password" class="login-box-placeholder">
                         </div>
                     </div>
                     <div class="agree">
                         By signing in, you confirmed that you have read
                         and accepted our <a href="term.html" target="_blank">term and services</a>
                     </div>
-                    <button class="item__button btn-color">Sign In</button>
+                    <button class="item__button btn-color" type="submit">Sign in</button>
                     <a class="forgot" href="term.html" target="_blank">Forgot Password?</a>
                 </div>
               </div>
               <div class="overlay-login hidden1"></div>
         </div>
+        </form>
 
     <header>    
     <section class="header" id="1">
@@ -120,11 +122,16 @@
 
             <div class="right-panel">
             <div class="log-in">
-                <svg width="24px" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="12" cy="7" r="5" stroke="black" stroke-width="0"/>
-                    <path d="M17 14H17.3517C18.8646 14 20.1408 15.1266 20.3285 16.6279L20.719 19.7519C20.8682 20.9456 19.9374 22 18.7344 22H5.26556C4.06257 22 3.1318 20.9456 3.28101 19.7519L3.67151 16.6279C3.85917 15.1266 5.13538 14 6.64835 14H7" stroke="black" stroke-width="0" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                <span>Log In</span>
+                <c:if test="${empty user}">
+                    <svg width="24px" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12" cy="7" r="5" stroke="black" stroke-width="0"/>
+                        <path d="M17 14H17.3517C18.8646 14 20.1408 15.1266 20.3285 16.6279L20.719 19.7519C20.8682 20.9456 19.9374 22 18.7344 22H5.26556C4.06257 22 3.1318 20.9456 3.28101 19.7519L3.67151 16.6279C3.85917 15.1266 5.13538 14 6.64835 14H7" stroke="black" stroke-width="0" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    <span>Log In</span>
+                </c:if>
+                    <c:if test="${not empty user}">
+                        <a href="GundamController/logout" style="text-decoration: none">${user.fullName}</a> 
+                    </c:if>
             </div>
 
             <div class="shopping-cart">
@@ -170,12 +177,17 @@
         <div class="shop-list">
             <div class="container">
                 <c:forEach var="gunpla" items="${list}">
+                    <a class="item-view">    
                         <div class="item">
                     <img src="<c:url value="/images/${gunpla.imgPath}"/>" alt="gundam 1" class="item__img">
                       <p class="item__name">${gunpla.name}</p>
                         <p class="item__price">$${gunpla.price}</p>      
-                        <button class="item__button"><a class="item-view" href="GundamController/addtocart?id=${gunpla.id}">Add to cart</a></button>
+                        <button class="item__button">
+<!--                            <a class="item-view" href="GundamController/addtocart?id=${gunpla.id}">Add to cart</a>-->
+                            View Item
+                        </button>
                   </div>
+                    </a>
                 </c:forEach>
         </c:if>
             </div>

@@ -178,7 +178,7 @@ public class GundamController extends HttpServlet {
             view(request, response);
         } else {
             request.setAttribute("message", "login failed");
-            request.getRequestDispatcher("/login.jsp").forward(request, response);
+            request.getRequestDispatcher("/viewmain1.jsp").forward(request, response);
         }
     }
 
@@ -187,7 +187,8 @@ public class GundamController extends HttpServlet {
         HttpSession session = request.getSession();
         session = request.getSession();
         session.invalidate();
-        request.getRequestDispatcher("/viewmain.jsp").forward(request, response);
+//        request.getRequestDispatcher("/viewmain.jsp").forward(request, response);
+        view(request, response);
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
