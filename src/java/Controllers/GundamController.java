@@ -111,8 +111,10 @@ public class GundamController extends HttpServlet {
             throws ServletException, IOException, SQLException, ClassNotFoundException {
         String name = request.getParameter("name");
         List<Gunpla> list = GunplaDAO.search(name);
+        request.setAttribute("name", name);
         request.setAttribute("list", list);
         request.getRequestDispatcher("/viewmain1.jsp").forward(request, response);
+        
     }
 
     protected void addtocart(HttpServletRequest request, HttpServletResponse response)
