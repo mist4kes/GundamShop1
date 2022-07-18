@@ -24,9 +24,9 @@
                             <li class="header-item">
                                 <a href="http://localhost:8084/GundamShop/">Home</a>
                             </li>
-                            <li class="header-item"><a href="index.html#2">Shop</a></li>
-                            <li class="header-item"><a href="index.html#3">About</a></li>
-                            <li class="header-item"><a href="index.html#4">Contact</a></li>
+                            <li class="header-item"><a href="http://localhost:8084/GundamShop/#2">Shop</a></li>
+                            <li class="header-item"><a href="http://localhost:8084/GundamShop/#3">About</a></li>
+                            <li class="header-item"><a href="http://localhost:8084/GundamShop/#4">Contact</a></li>
                         </ul>
 
                         <div class="right-panel">
@@ -43,7 +43,7 @@
                                 </c:if>
                             </div>
 
-                            <a href="cart.html" class="shopping-cart" target="_blank">  <?xml version="1.0" encoding="iso-8859-1"?>
+                            <a href="GundamController/viewcart">  <?xml version="1.0" encoding="iso-8859-1"?>
                                 <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                      viewBox="0 0 491.123 491.123" style="enable-background:new 0 0 491.123 491.123;" xml:space="preserve">
                                 <g>
@@ -106,6 +106,7 @@
                                     <input class="quantity" min="0" name="quantity" value="1" type="number">
                                     <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" type="button" class="plus"></button>
                                 </div>
+                                <br>
                                 <input name="id" value="${gunpla.id}" type="hidden"/>
                                 <input name="price" value="${gunpla.price}" type="hidden"/>
                                 <button class="item__button btn-color" type="submit">Add to Cart</button>
@@ -179,7 +180,7 @@
                     </a>
                 </div>
                 <div class="copyright">
-                    Â© 2022 by HaiCauMuoi. Proudly created with HTML5 and CSS3. Designed by Wix
+                    © 2022 by HaiCauMuoi. Proudly created with HTML5 and CSS3. Designed by Wix
                 </div>
             </section>
         </div>

@@ -23,9 +23,9 @@
                             <li class="header-item">
                                 <a href="http://localhost:8084/GundamShop/">Home</a>
                             </li>
-                            <li class="header-item"><a href="index.html#2">Shop</a></li>
-                            <li class="header-item"><a href="index.html#3">About</a></li>
-                            <li class="header-item"><a href="index.html#4">Contact</a></li>
+                            <li class="header-item"><a href="http://localhost:8084/GundamShop/#2">Shop</a></li>
+                            <li class="header-item"><a href="http://localhost:8084/GundamShop/#3">About</a></li>
+                            <li class="header-item"><a href="http://localhost:8084/GundamShop/#4">Contact</a></li>
                         </ul>
 
                         <div class="right-panel">
@@ -177,7 +177,7 @@
                     </a>
                 </div>
                 <div class="copyright">
-                    Â© 2022 by HaiCauMuoi. Proudly created with HTML5 and CSS3. Designed by Wix
+                    © 2022 by HaiCauMuoi. Proudly created with HTML5 and CSS3. Designed by Wix
                 </div>
             </section>
         </div>

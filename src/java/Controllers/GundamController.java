@@ -139,7 +139,7 @@ public class GundamController extends HttpServlet {
 
         request.setAttribute("list", cartList);
         request.setAttribute("cartMessage", String.format("%s was added to your cart", gunpla.getName()));
-//        request.getRequestDispatcher("/viewmain1.jsp").forward(request, response);
+//        request.getRequestDispatcher("#2").forward(request, response);
         view(request, response);
 
     }
