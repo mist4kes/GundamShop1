@@ -15,10 +15,10 @@
     <body>
         <h1>Search Gundam</h1>
         <hr/>
-        <form action="GundamController">
+        <form action="GundamController/search">
             Input Gundam Name:
             <input type="text" name="name" value="${name}" />
-            <input type="submit" name="op" value="Search" />            
+            <input type="submit" name="name" value="Search" />            
         </form>
         <hr/>
         <c:if test="${not empty list}">
@@ -42,8 +42,8 @@
                         <td>${gun.price}</td>
                         <td><img src="<c:url value="/images/${gun.imgPath}"/>" width="100" height="60"/></td>
                         <td>${gun.categoryId}</td>
-                        <td class="text-center">${gunpla.status==0?"Inactive":"Active"}</td>
-                        <td class="text-center"><a href="GundamController/addtocart?id=${gunpla.id}">Add to cart</a></td>
+                        <td class="text-center">${gun.status==0?"Inactive":"Active"}</td>
+                        <td class="text-center"><a href="GundamController/addtocart?id=${gun.id}">Add to cart</a></td>
                         
                     </tr>
                 </c:forEach>

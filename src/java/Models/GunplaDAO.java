@@ -107,7 +107,7 @@ public class GunplaDAO {
         //Connecting to a database
         Connection con = DBUtils.getConnection();
         //Creating and executing sql statements            
-        String sql = "select * from gundam where name1 like ? and status=1";
+        String sql = "select * from gundam where name1 like ?";
         PreparedStatement stm = con.prepareStatement(sql);
         stm.setString(1, "%"+name+"%");// %so%
         ResultSet rs = stm.executeQuery();
@@ -116,9 +116,9 @@ public class GunplaDAO {
         while (rs.next()) {
             Gunpla gundam = new Gunpla();
             gundam.setId(rs.getInt("id"));
-            gundam.setName(rs.getString("name"));
+            gundam.setName(rs.getString("name1"));
             gundam.setPrice(rs.getInt("price"));
-            gundam.setImgPath(rs.getString("image"));
+            gundam.setImgPath(rs.getString("imgPath"));
             gundam.setCategoryId(rs.getInt("categoryId"));
             gundam.setStatus(rs.getString("status"));   
             list.add(gundam);

@@ -18,7 +18,7 @@
         <form action="GundamController/search">
             Input Gundam Name:
             <input type="text" name="name" value="${name}" />
-            <input type="submit" value="Search" />            
+            <input type="submit" name="name" value="Search" />            
         </form>
         <hr/>
         <c:if test="${not empty list}">
