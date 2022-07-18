@@ -134,6 +134,16 @@ body {
   align-items: center;
   justify-content: space-between;
   width: 7.5rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.log-in:hover {
+  color: #333;
+}
+
+.log-in > svg:hover {
+  color: #333;
 }
 
 .shopping-cart {
@@ -492,6 +502,11 @@ svg {
 .faq > a {
   text-decoration: none;
   color: #fff;
+  transition: all 0.2s;
+}
+
+.faq > a:hover {
+  color: #333;
 }
 
 .logo-footer {
@@ -503,6 +518,11 @@ svg {
 
 .logo-svg {
   fill: #fff;
+  transition: all 0.3s;
+}
+
+.logo-svg:hover {
+  fill: #333;
 }
 
 .copyright {
@@ -734,4 +754,144 @@ svg {
   background-color: #fff;
   padding-top: 5rem;
   border-top: #000 1px solid;
+}
+
+.login-box {
+  display: flex;
+  align-items: center;
+  width: 45%;
+  transition: all 0.5s;
+}
+
+.login-box:focus-within {
+  border: solid black 1px;
+}
+
+.login-box > input {
+  border: none;
+  height: 3rem;
+}
+
+/* login BOX*/
+.login-box-placeholder::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  font-family: 'futura', Arial, Helvetica, sans-serif;
+  opacity: 1; /* Firefox */
+  font-size: 1.5rem;
+}
+
+.login-box-placeholder:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  font-family: 'futura', Arial, Helvetica, sans-serif;
+  font-size: 1.5rem;
+}
+
+.login-box-placeholder::-ms-input-placeholder {
+  /* Microsoft Edge */
+  font-family: 'futura', Arial, Helvetica, sans-serif;
+  font-size: 1.5rem;
+}
+
+.login-box-placeholder {
+  outline: none;
+}
+
+.login-svg {
+  width: 2rem;
+  height: 2rem;
+  fill: var(--color-main);
+  margin: 1rem;
+}
+
+.left-modal_login {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.log-in-modal {
+  display: flex;
+  justify-content: center;
+}
+
+.big-text-log-in {
+  font-size: 4rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.sign-in {
+  font-size: 3rem;
+  text-align: center;
+}
+
+.form-container {
+  width: 100%;
+  height: 14rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.login-box {
+  width: 75%;
+  height: 5rem;
+  margin: 1rem;
+}
+
+.agree {
+  font-size: 1.2rem;
+  width: 80%;
+  text-align: center;
+}
+
+.forgot {
+  font-size: 1.2rem;
+}
+
+.overlay-login {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 4;
+}
+
+.close-modal-login {
+  position: absolute;
+  top: 1.2rem;
+  right: 2rem;
+  font-size: 3rem;
+  color: #333;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.modal-login {
+  position: fixed;
+  margin: 5%; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 25%;
+  height: 68%;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 5;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.hidden1 {
+  display: none;
 }
