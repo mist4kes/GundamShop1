@@ -135,7 +135,7 @@
                                     <a href="GundamController/logout" style="text-decoration: none">${user.fullName}</a> 
                                 </c:if>
                             </div>
-
+                            <a href="GundamController/viewcart">
                             <div class="shopping-cart">
                                 <?xml version="1.0" encoding="iso-8859-1"?>
                                 <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
@@ -154,6 +154,7 @@
                                       s11.5-26.1,25-26.1C280.423,398.861,291.923,410.261,290.923,424.861z"/>
                                 </g></g><g></g><g></g><g></g<g></g></g><g></g><g></g><g></g></g><g></g><g><g><g></g><g></g><g></g><g></g></svg>
                             </div>
+                            </a>
 
                         </div>
                     </div>
@@ -178,7 +179,7 @@
                     <div class="shop-list">
                         <div class="container">
                             <c:forEach var="gunpla" items="${list}">
-                                <a class="item-view">    
+                                <a class="item-view" href="GundamController/viewmodel?id=${gunpla.id}">    
                                     <div class="item">
                                         <img src="<c:url value="/images/${gunpla.imgPath}"/>" alt="gundam 1" class="item__img">
                                         <p class="item__name">${gunpla.name}</p>

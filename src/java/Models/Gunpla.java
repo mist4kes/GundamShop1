@@ -17,6 +17,7 @@ public class Gunpla {
     private String description;
     private String status;
     private int categoryId;
+    private int quantity;
 
     public Gunpla() {
     }
@@ -73,6 +74,14 @@ public class Gunpla {
 
     public String getStatus() {
         return status;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
     }
 
     public void setStatus(String status) {

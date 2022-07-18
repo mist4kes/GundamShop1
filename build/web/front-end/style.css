@@ -151,6 +151,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  text-decoration: none;
+  color: var(--color-main);
 }
 
 svg {
@@ -593,14 +595,6 @@ svg {
   background-color: var(--color-main);
 }
 
-.left-modal {
-  width: 60%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-}
-
 .close-modal {
   position: absolute;
   top: 1.2rem;
@@ -610,87 +604,6 @@ svg {
   cursor: pointer;
   border: none;
   background: none;
-}
-
-.slide-show-container {
-  max-width: 1000px;
-  position: relative;
-  width: 100%;
-  height: inherit;
-  text-align: center;
-}
-
-.mySlides {
-  display: none;
-}
-
-.mySlides > img {
-  width: 50rem;
-  height: 50rem;
-  margin-top: 1rem;
-}
-
-/* Next & previous buttons */
-.prev,
-.next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  padding: 16px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-}
-
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover,
-.next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
-.dot {
-  cursor: pointer;
-  height: 10px;
-  width: 10px;
-  margin: 0 2px;
-  background-color: #cdcdcd;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.dot-container {
-  text-align: center;
-}
-
-.active,
-.dot:hover {
-  background-color: #2b2b2b;
-}
-
-/* Fading animation */
-.fade {
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@keyframes fade {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
 }
 
 /* ------------------------------------- FAQ PAGE --------------------------- */
@@ -894,4 +807,290 @@ svg {
 
 .hidden1 {
   display: none;
+}
+
+.payment-container {
+  min-height: 80vh;
+  max-height: 280vh;
+  border-top: #cdcdcd 1px solid;
+  display: flex;
+  color: #000;
+  padding: 8rem 20rem;
+  background-color: #fff;
+  height: inherit;
+  width: 100%;
+}
+
+.left-payment {
+  background-color: #fff;
+  width: 62.5%;
+
+  height: inherit;
+}
+
+.right-payment {
+  background-color: #fff;
+  width: 37.5%;
+  height: 30rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-left: 5rem;
+}
+
+.payment-tag {
+  font-size: 3rem;
+  width: 80%;
+  border-bottom: #cdcdcd 1px solid;
+  padding-bottom: 2rem;
+}
+
+.left {
+  border-bottom: none;
+}
+
+.subtotal {
+  font-size: 2rem;
+  width: 80%;
+  padding: 2rem 0;
+}
+
+.sub-total,
+.estimate-shipping,
+.total-tag {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.total-tag {
+  font-size: 3rem;
+  padding: 2rem 0;
+  border-top: #cdcdcd 1px solid;
+  width: 80%;
+}
+
+.checkout-btn {
+  width: 80%;
+}
+
+.secure-text {
+  text-align: center;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  padding: 2rem;
+}
+
+.secure-text > svg {
+  margin-right: 0.8rem;
+}
+
+/* --------------------------------------------------------- */
+input[type='number'] {
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+.number-input {
+  border: 1px solid #000;
+  display: inline-flex;
+}
+
+.number-input,
+.number-input * {
+  box-sizing: border-box;
+}
+
+.number-input button {
+  outline: none;
+  -webkit-appearance: none;
+  background-color: transparent;
+  border: none;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  cursor: pointer;
+  margin: 0;
+  position: relative;
+}
+
+.number-input button:before,
+.number-input button:after {
+  display: inline-block;
+  position: absolute;
+  content: '';
+  width: 1rem;
+  height: 2px;
+  background-color: #212121;
+  transform: translate(-50%, -50%);
+}
+.number-input button.plus:after {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.number-input input[type='number'] {
+  font-family: sans-serif;
+  max-width: 5rem;
+  padding: 0.5rem;
+  border: none;
+  border-width: 0 2px;
+  font-size: 1.6rem;
+  height: 3rem;
+  font-weight: bold;
+  text-align: center;
+  color: #000;
+}
+
+.product-payment {
+  width: 100%;
+  height: 20rem;
+  padding: 2rem 0;
+  display: flex;
+  border-top: #ccc 1px solid;
+}
+
+.left-item {
+  width: 60%;
+  height: 12rem;
+  padding: 2rem 0;
+  display: flex;
+}
+
+.right-item {
+  width: 40%;
+  height: 12rem;
+  padding: 3rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.left-item > img {
+  width: 12rem;
+  height: 12rem;
+  border: #ccc 1px solid;
+}
+
+.text-price {
+  height: 100%;
+  padding-left: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.name-price {
+  font-size: 2rem;
+}
+
+.price-text {
+  font-size: 1.5rem;
+}
+
+.right-item > p {
+  font-size: 2rem;
+}
+
+.close-item {
+  font-size: 3rem;
+  color: #333;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.item-section {
+  width: 100%;
+  height: 90vh;
+  background-color: #fff;
+  padding: 5rem;
+}
+
+.item-container {
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 100%;
+}
+
+.mySlides {
+  display: none;
+}
+
+.mySlides > img {
+  width: 50rem;
+  height: 50rem;
+  margin-top: 1rem;
+}
+
+.left-modal {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.left-modal > img {
+  width: 50rem;
+  height: 50rem;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.slide-show-container {
+  max-width: 1000px;
+  position: relative;
+  width: 100%;
+  height: inherit;
+  text-align: center;
+}
+
+.dot {
+  cursor: pointer;
+  height: 10px;
+  width: 10px;
+  margin: 0 2px;
+  background-color: #cdcdcd;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.dot-container {
+  text-align: center;
+}
+
+.active,
+.dot:hover {
+  background-color: #2b2b2b;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }

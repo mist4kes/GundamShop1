@@ -29,14 +29,14 @@ go
 
 
 insert into Gundam values
-(1, 'Gundam Metal Build Seed Destiny',350000, 'Gundam Metal Build Seed Destiny.jpg','His red wing is rampage!',1,1),
-(2, 'Mobile Suit Gundam Unicorn RX-0',800000,'Mobile Suit Gundam Unicorn RX-0.jpg','His power is invulnerable!',1,4),
-(3, 'Gundam Breaker Battlogue Barbataurus',3000000,'Gundam Breaker Battlogue Barbataurus.jpg','A bellicose berserker!',1,4),
-(4, 'Gundam GN-001 Gundam Exia',9900000,'Gundam GN-001 Gundam Exia.jpg','Shield to heal!',1,5),
-(5, 'Gundam Heavyarms XXXG-01H',749000,'Gundam Heavyarms XXXG-01H.jpg','Gatling everywhere!',1,2),
-(6, 'Mobile Suit Gundam RX-78-2',289000,'Mobile Suit Gundam RX-78-2.jpg','His basic armor can defeat you with 1 hit!',1,1),
-(7, 'Gundam Wing XXXG-01S Shenlong',900000,'Gundam Wing XXXG-01S Shenlong.jpg','Slash!',1,2),
-(8, 'Mobile Suit Gundam Seed Aile Strike',2500000,'Mobile Suit Gundam Seed Aile Strike.jpg','Starlight cant be stamp out!',1,5)
+(1, 'Gundam Metal Build Seed Destiny',350, 'Gundam Metal Build Seed Destiny.jpg','His red wing is rampage!',1,1),
+(2, 'Mobile Suit Gundam Unicorn RX-0',800,'Mobile Suit Gundam Unicorn RX-0.jpg','His power is invulnerable!',1,4),
+(3, 'Gundam Breaker Battlogue Barbataurus',3000,'Gundam Breaker Battlogue Barbataurus.jpg','A bellicose berserker!',1,4),
+(4, 'Gundam GN-001 Gundam Exia',9900,'Gundam GN-001 Gundam Exia.jpg','Shield to heal!',1,5),
+(5, 'Gundam Heavyarms XXXG-01H',749,'Gundam Heavyarms XXXG-01H.jpg','Gatling everywhere!',1,2),
+(6, 'Mobile Suit Gundam RX-78-2',289,'Mobile Suit Gundam RX-78-2.jpg','His basic armor can defeat you with 1 hit!',1,1),
+(7, 'Gundam Wing XXXG-01S Shenlong',900,'Gundam Wing XXXG-01S Shenlong.jpg','Slash!',1,2),
+(8, 'Mobile Suit Gundam Seed Aile Strike',2500,'Mobile Suit Gundam Seed Aile Strike.jpg','Starlight cant be stamp out!',1,5)
 go
 
 go

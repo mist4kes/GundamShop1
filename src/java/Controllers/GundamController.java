@@ -37,14 +37,14 @@ public class GundamController extends HttpServlet {
     public void init() throws ServletException {
         super.init();
         cartList = new ArrayList<>();
-        cartList.add(new Gunpla(1, "Gundam Metal Build Seed Destiny", 350000, "Gundam Metal Build Seed Destiny.jpg", "His red wing is rampage!", "1", 1));
-        cartList.add(new Gunpla(2, "Mobile Suit Gundam Unicorn RX-0", 800000, "Mobile Suit Gundam Unicorn RX-0.jpg", "His power is invulnerable!", "1", 4));
-        cartList.add(new Gunpla(3, "Gundam Breaker Battlogue Barbataurus", 3000000, "Gundam Breaker Battlogue Barbataurus.jpg", "A bellicose berserker!", "1", 4));
-        cartList.add(new Gunpla(4, "Gundam GN-001 Gundam Exia", 9900000, "Gundam GN-001 Gundam Exia.jpg", "Shield to heal!", "1", 5));
-        cartList.add(new Gunpla(5, "Gundam Heavyarms XXXG-01H", 749000, "Gundam Heavyarms XXXG-01H.jpg", "Gatling everywhere!", "1", 2));
-        cartList.add(new Gunpla(6, "Mobile Suit Gundam RX-78-2", 289000, "Mobile Suit Gundam RX-78-2.jpg", "His basic armor can defeat you with 1 hit!", "1", 1));
-        cartList.add(new Gunpla(7, "Gundam Wing XXXG-01S Shenlong", 900000, "Gundam Wing XXXG-01S Shenlong.jpg", "Slash!", "1", 2));
-        cartList.add(new Gunpla(8, "Mobile Suit Gundam Seed Aile Strike", 2500000, "Mobile Suit Gundam Seed Aile Strike.jpg", "Starlight cant be stamp out!", "1", 5));
+        cartList.add(new Gunpla(1, "Gundam Metal Build Seed Destiny", 350, "Gundam Metal Build Seed Destiny.jpg", "His red wing is rampage!", "1", 1));
+        cartList.add(new Gunpla(2, "Mobile Suit Gundam Unicorn RX-0", 800, "Mobile Suit Gundam Unicorn RX-0.jpg", "His power is invulnerable!", "1", 4));
+        cartList.add(new Gunpla(3, "Gundam Breaker Battlogue Barbataurus", 3000, "Gundam Breaker Battlogue Barbataurus.jpg", "A bellicose berserker!", "1", 4));
+        cartList.add(new Gunpla(4, "Gundam GN-001 Gundam Exia", 9900, "Gundam GN-001 Gundam Exia.jpg", "Shield to heal!", "1", 5));
+        cartList.add(new Gunpla(5, "Gundam Heavyarms XXXG-01H", 749, "Gundam Heavyarms XXXG-01H.jpg", "Gatling everywhere!", "1", 2));
+        cartList.add(new Gunpla(6, "Mobile Suit Gundam RX-78-2", 289, "Mobile Suit Gundam RX-78-2.jpg", "His basic armor can defeat you with 1 hit!", "1", 1));
+        cartList.add(new Gunpla(7, "Gundam Wing XXXG-01S Shenlong", 900, "Gundam Wing XXXG-01S Shenlong.jpg", "Slash!", "1", 2));
+        cartList.add(new Gunpla(8, "Mobile Suit Gundam Seed Aile Strike", 2500, "Mobile Suit Gundam Seed Aile Strike.jpg", "Starlight cant be stamp out!", "1", 5));
     }
 
     /**
@@ -118,10 +118,14 @@ public class GundamController extends HttpServlet {
     protected void addtocart(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException, SQLException {
         int id = Integer.parseInt(request.getParameter("id"));
+        int quantity = Integer.parseInt(request.getParameter("quantity"));
+        int price = Integer.parseInt(request.getParameter("price"));
+        int total = price * quantity;
         HttpSession session = request.getSession();
 
         Gunpla gunpla = cartList.get(id - 1);
         Cart cart = (Cart) session.getAttribute("cart");
+        gunpla.setQuantity(quantity);
 
         //check session exist
         if (cart == null) {
@@ -129,16 +133,19 @@ public class GundamController extends HttpServlet {
         }
         cart.add(gunpla);
         session.setAttribute("cart", cart);
+        session.setAttribute("itemTotal", total);
 
         request.setAttribute("list", cartList);
         request.setAttribute("cartMessage", String.format("%s was added to your cart", gunpla.getName()));
-        request.getRequestDispatcher("/viewmain.jsp").forward(request, response);
+//        request.getRequestDispatcher("/viewmain1.jsp").forward(request, response);
+        view(request, response);
+
     }
 
     protected void viewcart(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException, SQLException {
         request.setAttribute("list", cartList);
-        request.getRequestDispatcher("/cart.jsp").forward(request, response);
+        request.getRequestDispatcher("/cart1.jsp").forward(request, response);
     }
 
     protected void checkout(HttpServletRequest request, HttpServletResponse response)
@@ -164,7 +171,7 @@ public class GundamController extends HttpServlet {
 
         request.setAttribute("list", list);
 //        request.setAttribute("gunpla", gunpla);
-        request.getRequestDispatcher("/viewmodel.jsp").forward(request, response);
+        request.getRequestDispatcher("/item.jsp").forward(request, response);
     }
 
     protected void login(HttpServletRequest request, HttpServletResponse response)
