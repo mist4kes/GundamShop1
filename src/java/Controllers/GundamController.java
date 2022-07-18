@@ -85,7 +85,7 @@ public class GundamController extends HttpServlet {
                 checkout(request, response);
                 break;
             case "search":
-//                search(request, response);
+                search(request, response);
                 break;
             case "viewmodel":
                 viewmodel(request, response);
@@ -104,20 +104,13 @@ public class GundamController extends HttpServlet {
         GunplaDAO gd = new GunplaDAO();
         List<Gunpla> list = gd.getList();
         request.setAttribute("list", list);
-        request.getRequestDispatcher("/viewmain.jsp").forward(request, response);
+        request.getRequestDispatcher("/viewmain1.jsp").forward(request, response);
     }
 
-//    protected void search(HttpServletRequest request, HttpServletResponse response)
-//            throws ServletException, IOException, SQLException {
-//        String searchText = request.getParameter("searchText");
-//        Gunpla gunpla = GunplaDAO.getGunplas(searchText);
-//        List<Gunpla> list = GunplaDAO.getGunplas(searchText);
-//        list.add(gunpla);
-//        
-//        request.setAttribute("list", list);
-////        request.setAttribute("gunpla", gunpla);
-//        request.getRequestDispatcher("/viewmodel.jsp").forward(request, response);
-//    }
+    protected void search(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException, SQLException {
+        
+    }
     protected void addtocart(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException, SQLException {
         int id = Integer.parseInt(request.getParameter("id"));
