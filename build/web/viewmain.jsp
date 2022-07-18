@@ -15,7 +15,7 @@
     <body>
         <h1>Home</h1>
         <hr>
-        <a href="<c:url value="GundamController/login"/>">Login</a>
+        <a href="<c:url value="/login.jsp"/>">Login</a>
         ${user.fullName}
         <hr>
 

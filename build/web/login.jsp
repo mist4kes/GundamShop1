@@ -14,13 +14,13 @@
     <body>
         <h1>Login Page</h1>
         <hr/>
-        <form action="GundamController/view" method="post">
+        <form action="GundamController/login" method="post">
             <p>User ID</p>
             <input type="text" name="userId" value="" size="20" />
             <p>Password</p>
             <input type="password" name="password" value="" size="20" />
             <br> <br>
-            <button type="submit" value="Login"/>
+            <input type="submit" value="Login"/>
         </form>
         <br>
         <br>

@@ -104,7 +104,7 @@ public class GundamController extends HttpServlet {
         GunplaDAO gd = new GunplaDAO();
         List<Gunpla> list = gd.getList();
         request.setAttribute("list", list);
-        request.getRequestDispatcher("/viewmain1.jsp").forward(request, response);
+        request.getRequestDispatcher("/viewmain.jsp").forward(request, response);
     }
 
 //    protected void search(HttpServletRequest request, HttpServletResponse response)
