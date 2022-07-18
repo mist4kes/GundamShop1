@@ -24,28 +24,72 @@ overlay1.addEventListener('click', closeModal2);
 
 document.addEventListener('keydown', function (e) {
   if (e.key === 'Escape' && !modal2.classList.contains('hidden1')) {
-    closeModal();
+    closeModal2();
   }
 });
 
 // CAROUSEL
-let slideIndex = 1;
-showSlides(slideIndex);
+// let slideIndex = 1;
+// showSlides(slideIndex);
 
-// Next/previous controls
-function plusSlides(n) {
-  showSlides((slideIndex += n));
+// // Next/previous controls
+// function plusSlides(n) {
+//   showSlides((slideIndex += n));
+// }
+
+// // Thumbnail image controls
+// function currentSlide(n) {
+//   showSlides((slideIndex = n));
+// }
+
+// function showSlides(n) {
+//   let i;
+//   let slides = document.getElementsByClassName('mySlides');
+//   let dots = document.getElementsByClassName('dot');
+//   if (n > slides.length) {
+//     slideIndex = 1;
+//   }
+//   if (n < 1) {
+//     slideIndex = slides.length;
+//   }
+//   for (i = 0; i < slides.length; i++) {
+//     slides[i].style.display = 'none';
+//   }
+//   for (i = 0; i < dots.length; i++) {
+//     dots[i].className = dots[i].className.replace(' active', '');
+//   }
+//   slides[slideIndex - 1].style.display = 'block';
+//   dots[slideIndex - 1].className += 'active';
+// }
+
+var slideIndex = 1,
+  interval;
+
+function stopAndStart() {
+  if (interval) {
+    clearInterval(interval);
+  }
+  interval = setInterval(showSlides, 5000); // Change image every 5 seconds;
 }
 
-// Thumbnail image controls
+function plusSlides(n) {
+  showSlides((slideIndex += n));
+  stopAndStart();
+}
+
 function currentSlide(n) {
   showSlides((slideIndex = n));
+  stopAndStart();
 }
 
 function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName('mySlides');
-  let dots = document.getElementsByClassName('dot');
+  var i,
+    slides = document.getElementsByClassName('mySlides'),
+    dots = document.getElementsByClassName('dot');
+
+  if (n === undefined) {
+    n = ++slideIndex;
+  }
   if (n > slides.length) {
     slideIndex = 1;
   }
@@ -61,3 +105,5 @@ function showSlides(n) {
   slides[slideIndex - 1].style.display = 'block';
   dots[slideIndex - 1].className += ' active';
 }
+
+stopAndStart();
