@@ -115,7 +115,7 @@
 
                         <ul class="list">
                             <li class="header-item">
-                                <a href="GundamController/view">Home</a>
+                                <a href="http://localhost:8084/GundamShop/">Home</a>
                             </li>
                             <li class="header-item"><a href="#2">Shop</a></li>
                             <li class="header-item"><a href="#3">About</a></li>
@@ -153,7 +153,6 @@
                                       C332.623,387.361,302.323,357.161,265.823,357.161z M290.923,424.861c0,14.6-11.5,26.1-25,26.1c-13.5,0-25-11.5-25-26.1
                                       s11.5-26.1,25-26.1C280.423,398.861,291.923,410.261,290.923,424.861z"/>
                                 </g></g><g></g><g></g><g></g<g></g></g><g></g><g></g><g></g></g><g></g><g><g><g></g><g></g><g></g><g></g></svg>
-                                <span>0</span>
                             </div>
 
                         </div>
