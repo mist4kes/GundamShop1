@@ -1,35 +1,5 @@
 'use strict';
 
-// OPEN MODAL
-const modal1 = document.querySelector('.quick-view-modal');
-const overlay = document.querySelector('.overlay');
-const btnCloseModal = document.querySelector('.close-modal');
-const btnsOpenModal1 = document.querySelectorAll('.item-view');
-
-const openModal = function () {
-  modal1.classList.remove('hidden');
-  overlay.classList.remove('hidden');
-};
-
-const closeModal = function () {
-  modal1.classList.add('hidden');
-  overlay.classList.add('hidden');
-};
-
-for (let i = 0; i < btnsOpenModal1.length; i++)
-  btnsOpenModal1[i].addEventListener('click', openModal);
-
-btnCloseModal.addEventListener('click', closeModal);
-overlay.addEventListener('click', closeModal);
-
-document.addEventListener('keydown', function (e) {
-  // console.log(e.key);
-
-  if (e.key === 'Escape' && !modal1.classList.contains('hidden')) {
-    closeModal();
-  }
-});
-
 // LOG IN MODAL
 const modal2 = document.querySelector('.log-in-modal');
 const btnsOpenModal2 = document.querySelectorAll('.log-in');
@@ -59,7 +29,6 @@ document.addEventListener('keydown', function (e) {
 });
 
 // CAROUSEL
-
 let slideIndex = 1;
 showSlides(slideIndex);
 
@@ -87,7 +56,7 @@ function showSlides(n) {
     slides[i].style.display = 'none';
   }
   for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace('active', '');
+    dots[i].className = dots[i].className.replace(' active', '');
   }
   slides[slideIndex - 1].style.display = 'block';
   dots[slideIndex - 1].className += ' active';
