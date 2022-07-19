@@ -81,6 +81,12 @@ public class GundamController extends HttpServlet {
             case "viewcart":
                 viewcart(request, response);
                 break;
+            case "delcart":
+                delcart(request, response);
+                break;
+            case "clearcart":
+                clearcart(request, response);
+                break;
             case "checkout":
                 checkout(request, response);
                 break;
@@ -114,7 +120,7 @@ public class GundamController extends HttpServlet {
         request.setAttribute("name", name);
         request.setAttribute("list", list);
         request.getRequestDispatcher("/viewmain1.jsp").forward(request, response);
-        
+
     }
 
     protected void addtocart(HttpServletRequest request, HttpServletResponse response)
@@ -136,7 +142,7 @@ public class GundamController extends HttpServlet {
         cart.add(gunpla);
         session.setAttribute("cart", cart);
         session.setAttribute("itemTotal", total);
-
+        
         request.setAttribute("list", cartList);
         request.setAttribute("cartMessage", String.format("%s was added to your cart", gunpla.getName()));
 //        request.getRequestDispatcher("#2").forward(request, response);
@@ -160,8 +166,9 @@ public class GundamController extends HttpServlet {
         if (cart != null) {
             cart.empty();
         }
-        session.setAttribute("cart", cart);
-        request.getRequestDispatcher("/checkout.jsp").forward(request, response);
+//        session.setAttribute("cart", cart);
+//        request.getRequestDispatcher("/viewmain1.jsp").forward(request, response);
+        view(request, response);
     }
 
     protected void viewmodel(HttpServletRequest request, HttpServletResponse response)
@@ -202,6 +209,43 @@ public class GundamController extends HttpServlet {
         session.invalidate();
 //        request.getRequestDispatcher("/viewmain.jsp").forward(request, response);
         view(request, response);
+    }
+
+    protected void delcart(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException, SQLException {
+        int id = Integer.parseInt(request.getParameter("id"));
+        HttpSession session = request.getSession();
+
+        Gunpla gunpla = cartList.get(id - 1);
+//        Gunpla gunpla = GunplaDAO.getGunpla(id);
+        Cart cart = (Cart) session.getAttribute("cart");
+        //check session exist
+//        if (cart == null) {
+//            cart = new Cart();
+//        }
+//      cart.add(gunpla);
+        cart.del(gunpla);
+        session.setAttribute("cart", cart);
+
+        request.setAttribute("list", cartList);
+        request.setAttribute("cartMessage", String.format("%s was added to your cart", gunpla.getName()));
+        viewcart(request, response);
+//        view(request, response);
+    }
+
+    protected void clearcart(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException, SQLException {
+        HttpSession session = request.getSession();
+
+        Cart cart = (Cart) session.getAttribute("cart");
+
+        //check session exist
+        if (cart != null) {
+            cart.empty();
+        }
+//        session.setAttribute("cart", cart);
+//        request.getRequestDispatcher("/viewmain1.jsp").forward(request, response);
+        viewcart(request, response);
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

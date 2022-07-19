@@ -22,6 +22,10 @@ public class Cart {
     public void add(Gunpla gunpla) {
         list.add(gunpla);
     }
+    
+    public void del(Gunpla gunpla){
+        list.remove(gunpla);
+    }
 
     public List<Gunpla> getList() {
         return list;

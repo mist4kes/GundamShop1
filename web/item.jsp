@@ -96,7 +96,7 @@
                             <div class="right-modal-text">
                                 <h1>${gunpla.name}</h1>
                                 <h2>${gunpla.price}$</h2>
-                                <p>SKU: 0000${gunpla.id}</p>
+                                <p>ID: 0000${gunpla.id}</p>
                                 <p>${gunpla.description}</p>
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At quod maiores eum doloremque animi porro sequi aliquid magni doloribus, ut culpa nulla nisi ea amet necessitatibus accusantium fugit corrupti dolor.</p>
                             </div>
@@ -143,9 +143,9 @@
                 </div>
 
                 <div class="faq">
-                    <a href="FAQ.html" target="_blank">FAQ</a> 
-                    <a href="Shipping.html" target="_blank">Shipping and Return</a>
-                    <a href="term.html" target="_blank">Term and Condition</a> 
+                    <a href="/FAQ.html" target="_blank">FAQ</a> 
+                    <a href="<c:url value="/Shipping.html"/>" target="_blank">Shipping and Return</a>
+                    <a href="/term.html" target="_blank">Term and Condition</a> 
                 </div>
                 <div class="logo-footer">
                     <a href="https://www.instagram.com/_.haianh._/" target="_blank" >

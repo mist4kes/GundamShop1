@@ -486,8 +486,8 @@
                 </div>
 
                 <div class="faq">
-                    <a href="Shipping.html" target="_blank">Shipping and Return</a>
-                    <a href="term.html" target="_blank">Term and Condition</a> 
+                    <a href="<c:url value="/Shipping.jsp"/>" target="_blank">Shipping and Return</a>
+                    <a href="<c:url value="/term.jsp"/>" target="_blank">Term and Condition</a> 
                 </div>
                 <div class="logo-footer">
                     <a href="https://www.instagram.com/_.haianh._/" target="_blank" >
