@@ -217,12 +217,8 @@ public class GundamController extends HttpServlet {
         HttpSession session = request.getSession();
 
         Gunpla gunpla = cartList.get(id - 1);
-//        Gunpla gunpla = GunplaDAO.getGunpla(id);
         Cart cart = (Cart) session.getAttribute("cart");
-        //check session exist
-//        if (cart == null) {
-//            cart = new Cart();
-//        }
+        
 //      cart.add(gunpla);
         cart.del(gunpla);
         session.setAttribute("cart", cart);

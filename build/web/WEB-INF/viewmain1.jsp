@@ -12,7 +12,7 @@
     <body>
         <div class="scrolling-box">
 
-            <div class="quick-view-modal hidden">
+<!--            <div class="quick-view-modal hidden">
                 <div class="modal">
                     <button class="close-modal">&times;</button>
                     <div class="left-modal">
@@ -50,7 +50,7 @@
                     </div>
                 </div>
                 <div class="overlay hidden"></div>
-            </div>
+            </div>-->
 
             <form action="GundamController/login" method="post">
                 <div class="log-in-modal hidden1">

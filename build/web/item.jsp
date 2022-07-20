@@ -11,6 +11,56 @@
     </head>
     <body>
         <div class="scrolling-box">
+            <form action="GundamController/login" method="post">
+                <div class="log-in-modal hidden1">
+                    <div class="modal-login">
+                        <button class="close-modal-login">&times;</button>
+                        <div class="left-modal_login">
+                            <div>
+                                <div class="big-text-log-in">
+                                    gundam
+                                </div>
+                                <div class="sign-in">
+                                    Sign In to your account
+                                </div>
+                            </div>
+                            <div class="form-container">
+                                <div class="login-box">
+                                    <?xml version="1.0" standalone="no"?>
+                                    <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
+                                        "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+                                    <svg class="login-svg" version="1.0" xmlns="http://www.w3.org/2000/svg"
+                                         width="24.000000pt" height="24.000000pt" viewBox="0 0 24.000000 24.000000"
+                                         preserveAspectRatio="xMidYMid meet">
+
+                                    <g transform="translate(0.000000,24.000000) scale(0.100000,-0.100000)"
+                                       stroke="none">
+                                    <path d="M24 187 c-3 -8 -4 -43 -2 -78 l3 -64 95 0 95 0 0 75 0 75 -93 3 c-72
+                                          2 -94 0 -98 -11z m176 -12 c0 -3 -18 -16 -40 -30 l-40 -25 -40 25 c-22 14 -40
+                                          27 -40 30 0 3 36 5 80 5 44 0 80 -2 80 -5z m-40 -50 l40 25 0 -45 0 -45 -80 0
+                                          -80 0 0 45 0 45 40 -25 40 -25 40 25z"/>
+                                    </g>
+                                    </svg>
+
+                                    <input type="text" placeholder="Your Account" name="userId" class="login-box-placeholder">
+                                </div>
+
+                                <div class="login-box">
+                                    <?xml version="1.0"?><svg class="login-svg"  xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" width="24px" height="24px">    <path d="M 12 1 C 8.6761905 1 6 3.6761905 6 7 L 6 8 C 4.9069372 8 4 8.9069372 4 10 L 4 20 C 4 21.093063 4.9069372 22 6 22 L 18 22 C 19.093063 22 20 21.093063 20 20 L 20 10 C 20 8.9069372 19.093063 8 18 8 L 18 7 C 18 3.6761905 15.32381 1 12 1 z M 12 3 C 14.27619 3 16 4.7238095 16 7 L 16 8 L 8 8 L 8 7 C 8 4.7238095 9.7238095 3 12 3 z M 6 10 L 18 10 L 18 20 L 6 20 L 6 10 z M 12 13 C 10.9 13 10 13.9 10 15 C 10 16.1 10.9 17 12 17 C 13.1 17 14 16.1 14 15 C 14 13.9 13.1 13 12 13 z"/></svg>
+                                    <input type="password" placeholder="Your Password" name="password" class="login-box-placeholder">
+                                </div>
+                            </div>
+                            <div class="agree">
+                                By signing in, you confirmed that you have read
+                                and accepted our <a href="term.html" target="_blank">term and services</a>
+                            </div>
+                            <button class="item__button btn-color" type="submit">Sign in</button>
+                            <a class="forgot" href="term.html" target="_blank">Forgot Password?</a>
+                        </div>
+                    </div>
+                    <div class="overlay-login hidden1"></div>
+                </div>
+            </form>
 
             <header>    
                 <section class="header" id="1">
@@ -101,12 +151,11 @@
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At quod maiores eum doloremque animi porro sequi aliquid magni doloribus, ut culpa nulla nisi ea amet necessitatibus accusantium fugit corrupti dolor.</p>
                             </div>
                             <form action="GundamController/addtocart">
-                                <div class="number-input">
+                                <div class="number-input" style="width: 17%;">
                                     <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" type="button"></button>
                                     <input class="quantity" min="0" name="quantity" value="1" type="number">
                                     <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" type="button" class="plus"></button>
                                 </div>
-                                <br>
                                 <input name="id" value="${gunpla.id}" type="hidden"/>
                                 <input name="price" value="${gunpla.price}" type="hidden"/>
                                 <button class="item__button btn-color" type="submit">Add to Cart</button>
