@@ -133,7 +133,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 7.5rem;
+  width: 80%;
   cursor: pointer;
   transition: all 0.2s;
 }
@@ -841,9 +841,11 @@ svg {
 
 .payment-tag {
   font-size: 3rem;
-  width: 80%;
-  border-bottom: #cdcdcd 1px solid;
-  padding-bottom: 2rem;
+    width: 100%;
+    border-bottom: #cdcdcd 1px solid;
+    padding-bottom: 2rem;
+    display: flex;
+    justify-content: space-between;
 }
 
 .left {
@@ -1094,3 +1096,11 @@ input[type='number']::-webkit-outer-spin-button {
     opacity: 1;
   }
 }
+
+.clear-cart{
+    text-decoration: none;
+    color: #000;
+}
+
+
+
