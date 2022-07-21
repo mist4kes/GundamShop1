@@ -240,6 +240,7 @@ svg {
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   column-gap: 3rem;
   row-gap: 8rem;
+  column-gap:5rem;
 }
 
 .item {
@@ -248,7 +249,7 @@ svg {
   justify-content: space-between;
   align-items: center;
   width: 27.5rem;
-  height: 37.5rem;
+  height: 39.5rem;
   transition: all 0.2s;
 }
 
@@ -289,6 +290,7 @@ svg {
   font-size: 2rem;
   margin-bottom: 0.2rem;
   text-transform: capitalize;
+  text-align: center;
 }
 
 .item__price {
